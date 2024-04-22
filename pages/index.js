@@ -157,17 +157,16 @@ const Home = () => {
                     className="flex flex-row w-max overflow-x-scroll no-scrollbar select-none"
                     ref={scrollRef}
                   >
-                    {topCreators &&
-                      topCreators.map((creator, i) => (
-                        // custom component  from import
-                        <CreatorCard
-                          key={`creator-${i}`}
-                          rank={i + 1}
-                          creatorImage={images[`creator${i + 1}`]}
-                          creatorName={shortenAddress(creator.seller)}
-                          creatorEths={creator.sum}
-                        />
-                      ))}
+                    {topCreators && topCreators.map((creator, i) => (
+                      // custom component  from import
+                      <CreatorCard
+                        key={`creator-${i}`}
+                        rank={i + 1}
+                        creatorImage={images[`creator${i + 1}`]}
+                        creatorName={shortenAddress(creator.seller)}
+                        creatorEths={creator.sum}
+                      />
+                    ))}
                     {/* map through the top creators
                     {[6, 7, 8, 9, 10].map((i) => (
                       // custom component  from import
